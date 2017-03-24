@@ -1,34 +1,44 @@
 <?php
 require_once(PATH_VUE.'header.php');
 ?>
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+  </ol>
 
-<div class="slideshow-container">
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
 
 <?php
 foreach ($diapositives as $diapositive ){
 ?>
-	<div class="mySlides fade">
-  		<div class="numbertext">1 / 3</div>
-  		<img src="<?php echo PATH_IMAGES.$diapositive ['nom_fichier'];  ?>" style="width:100%">
-  		<div class="text">Caption Text</div>
-	</div>
+	<div id="<?php echo $diapositive ['id']; ?>" class="item">
+      <img src="<?php echo PATH_IMAGES.$diapositive ['nom_fichier'];  ?>" alt="...">
+      <div class="carousel-caption">
+		<h3><?php echo $diapositive ['titre'];  ?></h3>
+        <p><?php echo $diapositive ['description'];  ?><p>
+      </div>
+  </div>
 <?php
 }
 ?>
 
-<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-<a class="next" onclick="plusSlides(1)">&#10095;</a>
-
-</div>
-<br>
-
-<div style="text-align:center">
-  <span class="dot" onclick="currentSlide(1)"></span>
-  <span class="dot" onclick="currentSlide(2)"></span>
-  <span class="dot" onclick="currentSlide(3)"></span>
+ <!-- Controls -->
+ <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+   <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+   <span class="sr-only">Previous</span>
+ </a>
+ <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+   <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+   <span class="sr-only">Next</span>
+ </a>
 </div>
 <?php
 require_once (PATH_VUE.'footer.php');
 ?>
-
-  <script src="<?php echo PATH_SCRIPT.'slider.js'; ?>"></script>
+<script>
+$('.carousel').carousel()
+$("#1").addClass("active");
+</script>
