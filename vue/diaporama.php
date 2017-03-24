@@ -7,7 +7,7 @@ foreach ($diapositives as $diapositive ){
 	?>
 	 <div class="slideshow-container">
   <div class="mySlides fade">
-    <img src="<?php echo PATH_IMAGES.$diapositive ['nomFichier'];  ?>" style="width:100%">
+    <img src="<?php echo PATH_IMAGES.$diapositive ['nom_fichier'];  ?>" style="width:100%">
     <div class="text">Caption Text</div>
   </div>
   <?php

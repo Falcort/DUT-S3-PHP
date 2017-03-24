@@ -53,10 +53,6 @@ position: relative;
 margin: auto;
 }
 
-.mySlides {
-  display: none;
-}
-
 /* Next & previous buttons */
 .prev, .next {
 cursor: pointer;
