@@ -2,14 +2,18 @@
 
 require_once(PATH_VUE.'header.php');
 
-
+?>
+<div class="slideshow-container">
+<?php
 foreach ($diapositives as $diapositive ){
 	?>
-	 <div class="slideshow-container">
-  <div class="mySlides fade">
-    <img src="<?php echo PATH_IMAGES.$diapositive ['nom_fichier'];  ?>" style="width:100%">
-    <div class="text">Caption Text</div>
-  </div>
+
+
+	<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <img src="<?php echo PATH_IMAGES.$diapositive ['nom_fichier'];  ?>" style="width:100%">
+  <div class="text">Caption Text</div>
+</div>
   <?php
 
 }
