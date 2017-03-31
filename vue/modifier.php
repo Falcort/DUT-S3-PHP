@@ -8,8 +8,9 @@ require_once(PATH_VUE . 'header.php');
         foreach ($diapositives as $diapositive) {
             $i = 0;
             ?>
-            <li data-target="#carousel-example-generic" data-slide-to="<?php echo $i ?>" class="active"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="<?php echo $i ?>"></li>
             <?php
+            $i = $i+1;
         }
         ?>
     </ol>
@@ -42,7 +43,13 @@ require_once(PATH_VUE . 'header.php');
         </a>
     </div>
 </div>
-<table>
+<h3>Ajouter un image</h3>
+<form>
+    <input class="form-control" type="file">
+    <button class="btn btn-default">Envoyer Fichier</button>
+</form>
+<h3>Modifier un image</h3>
+<table class="table">
     <tr>
         <th></th>
         <th>Ordre Image</th>
@@ -56,13 +63,15 @@ require_once(PATH_VUE . 'header.php');
 foreach ($diapositives as $diapositive) {
     ?>
     <tr>
-        <th><img src="<?php echo PATH_IMAGES . $diapositive ['nom_fichier']; ?>" style="max-width: 10%; height: auto;"></th>
-        <th><input placeholder="<?php echo PATH_IMAGES . $diapositive ['ordre']; ?>"></th>
-        <th><?php echo $diapositive ['nom_fichier']; ?></th>
-        <th><input placeholder="<?php echo $diapositive ['titre']; ?>"></th>
-        <th><textarea placeholder="<?php echo $diapositive ['description']; ?>"></textarea></th>
-        <th><button>Modifier</button></th>
-        <th><button>Supprimer</button></th>
+        <form action="index.php?php=modifier_script?id=<? echo $diapositive ['id'] ?>" method="POST">
+            <th style="max-width: 100px; height: auto;"><img src="<?php echo PATH_IMAGES . $diapositive ['nom_fichier']; ?>" style="max-width: 100px; height: auto;"></th>
+            <th><input name="ordre" class="form-control" placeholder="<?php echo $diapositive ['ordre']; ?>"></th>
+            <th><?php echo $diapositive ['nom_fichier']; ?></th>
+            <th><input name="tritre" class="form-control" placeholder="<?php echo $diapositive ['titre']; ?>"></th>
+            <th><textarea name="description" class="form-control" placeholder="<?php echo $diapositive ['description']; ?>"></textarea></th>
+            <th><button class="btn btn-default">Modifier</button></th>
+            <th><button class="btn btn-default">Supprimer</button></th>
+        </form>
     </tr>
 <?php } ?>
 </table>
