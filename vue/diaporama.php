@@ -1,18 +1,26 @@
-<?php
-require_once(PATH_VUE.'header.php');
-?>
 <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
   <!-- Indicators -->
   <ol class="carousel-indicators">
-    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+    <?php
+    foreach ($diapositives as $diapositive )
+    {
+    ?>
+    <li data-target="#carousel-example-generic" data-slide-to="<?php echo $diapositive['ordre']; ?>" id="<?php echo $diapositive['ordre']; ?>"></li>
+    <?php
+    }
+    ?>
   </ol>
 
   <!-- Wrapper for slides -->
   <div class="carousel-inner" role="listbox">
 
 <?php
-foreach ($diapositives as $diapositive ){
+foreach ($diapositives as $diapositive )
+{
+    if($diapositive['ordre']==1)
+    {
+        $active = $diapositive['id'];
+    }
 ?>
 	<div id="<?php echo $diapositive ['id']; ?>" class="item">
       <img src="<?php echo PATH_IMAGES.$diapositive ['nom_fichier'];  ?>" alt="...">
@@ -35,10 +43,9 @@ foreach ($diapositives as $diapositive ){
    <span class="sr-only">Next</span>
  </a>
 </div>
-<?php
-require_once (PATH_VUE.'footer.php');
-?>
+</div>
 <script>
 $('.carousel').carousel()
+$("#<?php echo $active ?>").addClass("active");
 $("#1").addClass("active");
 </script>
