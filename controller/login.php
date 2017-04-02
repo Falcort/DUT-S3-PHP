@@ -6,7 +6,7 @@
         $_SESSION['logged'] = true;
         $_SESSION['user'] = $_POST['login'];
         echo "Connecté";
-        header('Location ?page=index.php');
+        header('Location ?page=modifier.php');
     }
     else
     {
