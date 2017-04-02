@@ -1,5 +1,5 @@
 <?php
-    if(!isset($_SESSION['logged']) && !isset($_SESSION['user']))
+    if($_SESSION['logged'] != true && !isset($_SESSION['user']))
     {
         header('Location: index.php');
     }

@@ -16,8 +16,7 @@
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <?php
-                if (!isset($_SESSION['logged']) && !isset($_SESSION['user']))
-                {
+                if (!isset($_SESSION['logged']) && !isset($_SESSION['user'])) {
                     ?>
                     <form method="POST" action="index.php?page=login">
                         <input type="text" placeholder="<?php echo LOGIN_NAME; ?>" name="login"/>
@@ -25,15 +24,13 @@
                         <button type="submit" value="OK">Connexion</button>
                     </form>
                     <?php
-                }
-                else
-                {
-                ?>
-                <form method="POST" action="index.php?page=deco">
-                    Bonjour <?php echo $_SESSION['user']; ?>
-                    <button type="submit" value="OK">Déconnexion</button>
-                </form>
-                <?php
+                } else {
+                    ?>
+                    <form method="POST" action="index.php?page=deco">
+                        Bonjour <?php echo $_SESSION['user']; ?>
+                        <button type="submit" value="OK">Déconnexion</button>
+                    </form>
+                    <?php
                 }
                 ?>
             </ul>
