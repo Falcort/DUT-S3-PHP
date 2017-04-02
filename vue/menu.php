@@ -15,7 +15,7 @@
         <li><a href="#">WHERE</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-          <form method="POST" action="<?php echo PATH_CONTROLLER; ?>login.php">
+          <form method="POST" action="index.php?page=login">
               <input type="text" placeholder="<?php echo LOGIN_NAME; ?>" name="login" />
               <input type="password" placeholder="Mot de passe" name="password" />
               <button type="submit" value="OK">Connexion</button>

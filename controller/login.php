@@ -5,12 +5,11 @@
         session_start();
         $_SESSION['logged'] = true;
         $_SESSION['user'] = $_POST['login'];
-        echo "Connecté";
-        header('Location ?page=modifier.php');
+        header('Location: ?page=modifier');
     }
     else
     {
-        header('Location: ?page=404.php');
+        header('Location: ?page=404');
     }
 
 ?>
