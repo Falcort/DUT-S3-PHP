@@ -11,6 +11,7 @@ require_once(PATH_LANGUES . PATH_FR . 'textes.php');
 require_once(PATH_LIB . 'base.php');
 $base = new base();
 require_once(PATH_LIB . PATH_BDD . 'bdd.php');
+require_once(PATH_VUE.'alert.php');
 
 if (isset($_GET['page'])) {
     if ($base->isAlpha($_GET['page']) != false) {

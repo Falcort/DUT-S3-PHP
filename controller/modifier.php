@@ -1,7 +1,7 @@
 <?php
     if($_SESSION['logged'] != true && !isset($_SESSION['user']))
     {
-        header('Location: index.php');
+        header('Location: index.php?page=index&&message=ACCES_REFUSED');
     }
     else
     {
