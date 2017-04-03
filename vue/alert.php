@@ -60,6 +60,12 @@ if (isset($_GET['message'])) {
         case "ERROR":
             alert('danger', ERROR);
             break;
+        case "MODIF_SUCCES":
+            alert('success', MODIF_SUCCES);
+            break;
+        case "IMG_DEL":
+            alert('success', IMG_DEL);
+            break;
         default :
     }
 }

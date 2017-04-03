@@ -27,10 +27,13 @@ if (isset($_POST['ordre']) && isset($_POST['description']) && isset($_POST['titr
         //Le button d'attribut name="btn_sumit" et qui a comme attribut value="modifier" a été cliquer
         // on lance donc la fonction modifier de l'object bdd
         $bdd->modifier($id, $ordre, $titre, $description);
+
+        header('Location: ?page=modifier&&message=MODIF_SUCCES');
     } else if ($_REQUEST['btn_submit'] == "supprimer") {
         // sis c'est le boutton de value supprimer qui a été cliquer
         // on lancer donc la fonction supprimer de la classe bdd
         $bdd->supprimer($id);
+        header('Location: ?page=modifier&&message=IMG_DEL');
     }
     //Ici nous somme dans le cas de ajouter, il n'y a donc pas les meme verification de champs a faire
 } else if ($_REQUEST['btn_submit'] == "ajouter") {

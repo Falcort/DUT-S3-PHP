@@ -24,3 +24,5 @@ define('UPLOAD_SUCCES', 'Image envoyée !');
 define('TROP_GROS', 'Le fichier est trop volumineux');
 define('ALLOWED_FILES', 'Le fichier n\'est pas une image');
 define('ERROR', 'Erreur');
+define('MODIF_SUCCES', 'Modification enregistrée');
+define('IMG_DEL', 'Image supprimer');
