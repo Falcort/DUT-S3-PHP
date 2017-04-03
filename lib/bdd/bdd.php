@@ -1,10 +1,17 @@
 <?php
+/*
+ * Createur: Thibault SOUQUET
+ * Pour le cours de PHP
+ * IUT 2017
+ */
 
+// Ici on definie la classe BDD
 class bdd
 {
 
     public $donnees = NULL;
 
+    // Le constructeur
     function __construct($MYSQL_host, $MYSQL_dbname, $MYSQL_user, $MYSQL_password)
     {
         try {
@@ -16,6 +23,7 @@ class bdd
         }
     }
 
+    //Fonction que je ne comprend pas
     public function querryArray($monquery, $mesdonnees = array())
     {
 
@@ -30,6 +38,7 @@ class bdd
 
     }
 
+    //Pareil
     public function query($monquery, $mesdonnees = array())
     {
 
@@ -44,6 +53,18 @@ class bdd
         }
     }
 
+    // C'est la fonction qui modifier une image
+    // elle a besoin de 4 arguments
+    // Ce n'est pas la fonction du prof, je l'ai coder moi meme
+
+    //Elle utilise un systeme de paramtres
+    //on ne peu pas dans la commande sql inclure des variables PHP
+    //On prepare donc la fonction
+    //Dans la commande SQL a chaque fois qu'il y a :XXXXX il y aura un parametre
+    // Ici il y en a deux, :ordre, et :id
+    // Il veu ensuite dire ce :XXXX va etre egale a
+    // Pour cela on utilise bind params
+    // Une fois tout les paramettres defini on execute
     public function modifier($id, $ordre, $titre, $description)
     {
         try {
@@ -62,6 +83,7 @@ class bdd
         }
     }
 
+    //Pareil que celle du dessu, referez vous au explication au dessu
     public function supprimer($id)
     {
         try {
@@ -77,6 +99,7 @@ class bdd
         }
     }
 
+    //Pareil que celle du dessu, referez vous au explication au dessu
     public function ajouter($nom_fichier)
     {
         try {

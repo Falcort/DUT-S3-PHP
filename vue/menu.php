@@ -1,3 +1,12 @@
+<!--
+/*
+ * Createur: Thibault SOUQUET
+ * Pour le cours de PHP
+ * IUT 2017
+ */
+
+ Ce ajoute la navbar
+-->
 <!-- Navbar -->
 <nav class="navbar navbar-default">
     <div class="container">

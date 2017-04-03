@@ -1,3 +1,5 @@
+-- Fichier crée pour importer la base de donnée de mon pc portable a mon pc de bureau
+
 -- phpMyAdmin SQL Dump
 -- version 4.6.6
 -- https://www.phpmyadmin.net/

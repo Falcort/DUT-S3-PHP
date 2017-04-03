@@ -1,4 +1,11 @@
 <?php
+/*
+ * Createur: Thibault SOUQUET
+ * Pour le cours de PHP
+ * IUT 2017
+ */
+
+// Ici on defines les chemin du sites
 define('PATH_CONTROLLER', 'controller/');
 define('PATH_CSS', 'css/');
 define('PATH_DEFINES', 'defines/');

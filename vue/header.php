@@ -1,3 +1,12 @@
+<!--
+/*
+ * Createur: Thibault SOUQUET
+ * Pour le cours de PHP
+ * IUT 2017
+ */
+
+ Ce fichier import le debut d'un fichier html et les import de CSS et JS
+-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
