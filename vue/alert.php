@@ -38,20 +38,28 @@ if (isset($_GET['message'])) {
             break;
         case "PASSWORD_INVALIDE":
             alert('danger', MESSAGE_PASSWORD_INVALIDE);
+            break;
         case "ACCES_REFUSED":
             alert('danger', ACCES_REFUSER);
+            break;
         case "ALREADY_EXIST":
             alert('danger', ALREADY_FILE);
+            break;
         case "UPLOAD_SUCCES":
             alert('success', UPLOAD_SUCCES);
+            break;
         case "NO_FILE":
             alert('danger', NO_FILE);
+            break;
         case "TROP_GROS":
             alert('danger', TROP_GROS);
+            break;
         case "ALLOWED_FILES":
             alert('danger', ALLOWED_FILES);
+            break;
         case "ERROR":
             alert('danger', ERROR);
+            break;
         default :
     }
 }
