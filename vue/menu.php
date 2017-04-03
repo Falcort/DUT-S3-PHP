@@ -20,25 +20,28 @@
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav navbar-left">
                 <li><a href="?page=index"><?php echo TITRE_ACCUEIL ?></a></li>
-                <li><a href="?page=page">WHAT</a></li>
-                <li><a href="#">WHERE</a></li>
+                <li><a href="?page=diaporama">DIAPORAMA</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <?php
                 if (!isset($_SESSION['logged']) && !isset($_SESSION['user'])) {
                     ?>
-                    <form method="POST" action="index.php?page=login">
-                        <input type="text" placeholder="<?php echo LOGIN_NAME; ?>" name="login"/>
-                        <input type="password" placeholder="Mot de passe" name="password"/>
-                        <button type="submit" value="OK">Connexion</button>
-                    </form>
+                    <li>
+                        <form method="POST" action="index.php?page=login">
+                            <input type="text" placeholder="<?php echo LOGIN_NAME; ?>" name="login"/>
+                            <input type="password" placeholder="Mot de passe" name="password"/>
+                            <button type="submit" value="OK">Connexion</button>
+                        </form>
+                    </li>
                     <?php
                 } else {
                     ?>
-                    <form method="POST" action="index.php?page=deco">
-                        Bonjour <?php echo $_SESSION['user']; ?>
-                        <button type="submit" value="OK">Déconnexion</button>
-                    </form>
+                    <li>
+                        <form method="POST" action="index.php?page=deco">
+                            Bonjour <?php echo $_SESSION['user']; ?>
+                            <button type="submit" value="OK" class="btn btn-default">Déconnexion</button>
+                        </form>
+                    </li>
                     <?php
                 }
                 ?>

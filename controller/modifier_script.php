@@ -64,7 +64,7 @@ if (isset($_POST['ordre']) && isset($_POST['description']) && isset($_POST['titr
     $allowed_file_types = array('.png', '.jpg', '.gif', '.jpeg'); // on definie quelle extension de fichier est autoriser
 
     // on verifie que le fichier est une extension valide et que sa taille ne sois pas trop grosse
-    if (in_array($file_ext, $allowed_file_types) && ($filesize < 200000)) {
+    if (in_array($file_ext, $allowed_file_types) && ($filesize < 2000000000000000000000000000000000000000000000000000000000000)) {
         // On renome le fichier
         $newfilename = $name . $file_ext;
         if (file_exists(PATH_IMAGES . $newfilename)) {
@@ -81,7 +81,7 @@ if (isset($_POST['ordre']) && isset($_POST['description']) && isset($_POST['titr
     } elseif (empty($file_basename)) {
         // ici il ny a pas de fichier
         header('Location: ?page=modifier&&message=NO_FILE');
-    } elseif ($filesize > 200000) {
+    } elseif ($filesize > 2000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000) {
         // Le fichier est trop gros
         header('Location: ?page=modifier&&message=TROP_GROS');
     } else {
