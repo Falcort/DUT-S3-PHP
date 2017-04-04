@@ -1,12 +1,12 @@
 <?php
 /*
- * Createur: Thibault SOUQUET
+ * Créateur: Thibault SOUQUET
  * Pour le cours de PHP
  * IUT 2017
  */
 
-//ce script permet de ce deconnter
-//Il detruit la session php existante
+//Ce script permet de se déconnecter
+//Il détruit la session PHP existante
 
 session_start();
 $_SESSION = array();

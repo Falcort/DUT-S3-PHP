@@ -1,11 +1,11 @@
 <?php
 /*
- * Createur: Thibault SOUQUET
+ * Créateur: Thibault SOUQUET
  * Pour le cours de PHP
  * IUT 2017
  */
 
-// Ici on defines les chemin du sites
+// Ici on defines les chemins du site
 define('PATH_CONTROLLER', 'controller/');
 define('PATH_CSS', 'css/');
 define('PATH_DEFINES', 'defines/');

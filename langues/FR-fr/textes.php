@@ -1,13 +1,13 @@
 <?php
 /*
- * Createur: Thibault SOUQUET
+ * Créateur: Thibault SOUQUET
  * Pour le cours de PHP
  * IUT 2017
  */
 
-// Ici pour faciliter la correction ou voir meme la traduction
-// On met tout ce qui va etre afficher et ecrit pour l'utilisateur ici
-// et on utilisera ces variable pour les afficher/**/
+// Ici pour faciliter la correction ou voir même la traduction
+// On met tout ce qui va être affiché et ecrit pour l'utilisateur ici
+// et on utilisera ces variables pour les afficher/**/
 define('TITRE_ACCUEIL', "ACCUEIL");
 define('TITRE_ERREUR', "OOPS PAGE INTROUVABLE");
 define('ERREUR_404', "ERREUR 404");

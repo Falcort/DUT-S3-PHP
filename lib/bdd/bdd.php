@@ -1,6 +1,6 @@
 <?php
 /*
- * Createur: Thibault SOUQUET
+ * Créateur: Thibault SOUQUET
  * Pour le cours de PHP
  * IUT 2017
  */
@@ -17,13 +17,13 @@ class bdd
         try {
             $this->bdd = new PDO('mysql: host =' . $MYSQL_host . '; dbname=' . $MYSQL_dbname, $MYSQL_user, $MYSQL_password); //on crée un objet dans la classe bdd
             $this->bdd->exec('SET NAMES utf8');
-            $this->bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); // '::' Avoir acces a un attribut statique de la classe
+            $this->bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); // '::' Avoir accès à un attribut statique de la classe
         } catch (Exception $e) {
             die ('Erreur : ' . $e->getMessage());
         }
     }
 
-    //Fonction que je ne comprend pas
+    //Fonction que je ne comprends pas
     public function querryArray($monquery, $mesdonnees = array())
     {
 
@@ -53,18 +53,18 @@ class bdd
         }
     }
 
-    // C'est la fonction qui modifier une image
-    // elle a besoin de 4 arguments
-    // Ce n'est pas la fonction du prof, je l'ai coder moi meme
+    // C'est la fonction qui modifie une image
+    // Elle a besoin de 4 arguments
+    // Ce n'est pas la fonction du prof, je l'ai codé moi même
 
-    //Elle utilise un systeme de paramtres
-    //on ne peu pas dans la commande sql inclure des variables PHP
-    //On prepare donc la fonction
-    //Dans la commande SQL a chaque fois qu'il y a :XXXXX il y aura un parametre
+    // Elle utilise un système de paramètres
+    // On ne peut pas dans la commande SQL inclure des variables PHP
+    // On prépare donc la fonction
+    // Dans la commande SQL à chaque fois qu'il y a :XXXXX il y aura un paramètre
     // Ici il y en a deux, :ordre, et :id
-    // Il veu ensuite dire ce :XXXX va etre egale a
+    // Il veut ensuite dire ce :XXXX va être égale à
     // Pour cela on utilise bind params
-    // Une fois tout les paramettres defini on execute
+    // Une fois tout les paramètres defini on exécute
     public function modifier($id, $ordre, $titre, $description)
     {
         try {
@@ -83,7 +83,7 @@ class bdd
         }
     }
 
-    //Pareil que celle du dessu, referez vous au explication au dessu
+    //Pareil que celle du dessus, référez-vous aux explications au dessus
     public function supprimer($id)
     {
         try {
@@ -99,7 +99,7 @@ class bdd
         }
     }
 
-    //Pareil que celle du dessu, referez vous au explication au dessu
+    //Pareil que celle du dessus, référez-vous aux explications au dessus
     public function ajouter($nom_fichier)
     {
         try {

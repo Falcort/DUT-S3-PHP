@@ -1,10 +1,10 @@
 /*
- * Createur: Thibault SOUQUET
+ * Créateur: Thibault SOUQUET
  * Pour le cours de PHP
  * IUT 2017
  */
 
-// Ce fichiez est du javascript, il n'est pas au programme
+// Ce fichier est écrit en javascript, il n'est pas au programme
 
 var slideIndex = 0;
 showSlides();

@@ -1,7 +1,7 @@
 <?php
 
 /*
- * Createur: Thibault SOUQUET
+ * Créateur: Thibault SOUQUET
  * Pour le cours de PHP
  * IUT 2017
  */
@@ -28,10 +28,10 @@ class base
     {
         $string = str_replace(' ', '-', $string); // On remplace les " " avec des "-"
 
-        return preg_replace('/[^A-Za-z0-9\-]/', '', $string); // on supprime tout les chars spéciaux.
+        return preg_replace('/[^A-Za-z0-9\-]/', '', $string); // On supprime tout les chars spéciaux
     }
 
-    //isAlpha meme que le prof sauf que j'utilise ma fonction clean a moi
+    // isAlpha même que le prof sauf que j'utilise ma fonction clean à moi
     public static function isAlpha($string)
     {
         if (isset($string) && $string != '' && is_string($string) && !preg_match('/[\W]+/', $string) == 1) {

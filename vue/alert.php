@@ -1,12 +1,12 @@
 <?php
 /*
- * Createur: Thibault SOUQUET
+ * Créateur: Thibault SOUQUET
  * Pour le cours de PHP
  * IUT 2017
  */
 
 
-// On crée une fonction qui affiche de l'html avec deux parametres, le type de message, et le message lui meme
+// On crée une fonction qui affiche de l'html avec deux paramètres, le type de message, et le message lui-même
 function alert($classeAlert, $messageAlert)
 {
     ?>
@@ -17,13 +17,13 @@ function alert($classeAlert, $messageAlert)
     <?php
 }
 
-//Si dans l'url il y a ?message=XXX
-//Alors on va afficher un message
+// Si dans l'url il y a ?message=XXX
+// Alors on va afficher un message
 if (isset($_GET['message'])) {
     $message = $_GET['message'];
     switch ($message) {
-        // on regarde ce qu'il ya dans les ?message=
-        //Et en fonction de sa on affiche un message grace a la fonction afficher au dessu
+        // On regarde ce qu'il y a dans les ?message=
+        // Et en fonction de ça on affiche un message grâce à la fonction afficher au dessus
         case "URL_INVALIDE":
             alert('danger', MESSAGE_URL_INVALIDE);
             break;

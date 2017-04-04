@@ -1,11 +1,11 @@
 <!--
 /*
- * Createur: Thibault SOUQUET
+ * Créateur: Thibault SOUQUET
  * Pour le cours de PHP
  * IUT 2017
  */
 
- Ce ajoute la navbar
+ ajoute la navbar
 -->
 <!-- Navbar -->
 <nav class="navbar navbar-default">

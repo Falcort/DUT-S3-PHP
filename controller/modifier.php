@@ -1,14 +1,14 @@
 <?php
 /*
- * Createur: Thibault SOUQUET
+ * Créateur: Thibault SOUQUET
  * Pour le cours de PHP
  * IUT 2017
  */
 
-// Ici je verifie que l'utilisateur sois connecter pour qu'il puisse acceder a cette page
-// Pour verifier si il est connecter j'utilise les variable de session
-// voir login.php pour les explication de session
-// Si il est connecter a ce moment la il a le droit d'aceder a cette page
+// Ici je vérifie que l'utilisateur sois connecté pour qu'il puisse accéder à cette page
+// Pour vérifier si il est connecté j'utilise les variables de session
+// voir login.php pour les explications de session
+// Si il est connecté à ce moment là il a le droit d'accéder à cette page
 
 //Sinon je le redirige
 if ($_SESSION['logged'] != true && !isset($_SESSION['user'])) {

@@ -1,11 +1,11 @@
 <!--
 /*
- * Createur: Thibault SOUQUET
+ * Créateur: Thibault SOUQUET
  * Pour le cours de PHP
  * IUT 2017
  */
 
- Ce fichier sert juste a include le codee HTML du footer
+ Ce fichier sert juste à include le code HTML du footer
 -->
 </div>
 </section>

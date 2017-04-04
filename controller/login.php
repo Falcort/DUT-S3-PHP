@@ -1,26 +1,26 @@
 <?php
 /*
- * Createur: Thibault SOUQUET
+ * Créateur: Thibault SOUQUET
  * Pour le cours de PHP
  * IUT 2017
  */
 
-// On verifie que l'input avec l'attriubut "name" = login sois égale au login enregistrer dans le fichier de configuration
-// on veriffie ensuite que le mot de passe envoyé par l'input de d'attribut name="password"
-// Pour verifier j'utilise la fonction hash avec la methode 'SHA512'
-// j'ai utiliser cette fonction dans un echo pour recuperer le hash du mot de passe admin
-// J'ai enregistrer le resultat dans le define de PASSWORD
-// Pour verifier si c'est bien la meme chose, je re hash le mot de passe a chaque connexion
-// Je verifie ensuite les deux hash, celui dans le fichier configuration et celui envoyer par le form
+// On vérifie que l'input avec l'attribut "name" = login soit égale au login enregistré dans le fichier de configuration
+// On vérifie ensuite que le mot de passe envoyé par l'input de d'attribut name="password"
+// Pour vérifier j'utilise la fonction hash avec la méthode 'SHA512'
+// J'ai utiliser cette fonction dans un echo pour recuperer le hash du mot de passe admin
+// J'ai enregistré le résultat dans le define de PASSWORD
+// Pour vérifier si c'est bien la même chose, je re-hash le mot de passe à chaque connexion
+// Je vérifie ensuite les deux hash, celui dans le fichier configuration et celui envoyé par le form
 
-// Si il on égaux, alors c'est que le mot de passe est correct
-// Dans ce cas je crée un séssion
-// Une session est des variables php qui von ce transmettre de page en page
-// Je crée les varibales 'logged' et 'user'
-// Ensuite grace au header je redirige sur la bonne page en affichant un message de confirmation de connexion
+// Si ils sont égaux, alors c'est que le mot de passe est correct
+// Dans ce cas je crée un session
+// Une session est un ensemble de variables php qui vont se transmettre de pages en pages
+// Je créé les varibales 'logged' et 'user'
+// Ensuite grâce au header je redirige sur la bonne page en affichant un message de confirmation de connexion
 
-//Dans le cas ou le mot de passe ou le nom d'utilisateur n'est pas correct alors je detourne sur la page 404
-//Eet j'affiche un erreur
+//Dans le cas où le mot de passe ou le nom d'utilisateur n'est pas correct alors je détourne sur la page 404
+//Et j'affiche une erreur
 if ($_POST['login'] == LOGIN && hash('sha512', $_POST['password']) == PASSWORD) {
     session_start();
     $_SESSION['logged'] = true;
