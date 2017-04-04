@@ -31,7 +31,7 @@
 
             //En dessou pour chaque dispo on insert ces lignes
             ?>
-            <div id="<?php echo $diapositive ['id']; ?>" class="item">
+            <div id="ordre<?php echo $diapositive ['id']; ?>" class="item">
                 <img src="<?php echo PATH_IMAGES . $diapositive ['nom_fichier']; ?>" alt="...">
                 <div class="carousel-caption">
                     <h3><?php echo $diapositive ['titre']; ?></h3>
@@ -59,6 +59,6 @@
     // On active donc le carousel
     //On active l'image avec l'odre 1 sauvgarder dans $active precedement
     $('.carousel').carousel()
-    $("#<?php echo $active ?>").addClass("active");
+    $("#ordre<?php echo $active ?>").addClass("active");
     $("#1").addClass("active");
 </script>
